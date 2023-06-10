@@ -1,0 +1,49 @@
+name: Prod
+description: ''
+version: 0.0.1
+author: flybirdgroup@163.com
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: prod
+  parentArtefactID: flybirdgroup163.com_team
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-06-10 08:29:36'
+  modifiedAt: '2023-06-10 08:29:36'
+pipelines:
+  pipelines/first-pipeline:
+    name: first-pipeline
+    description: ''
+    author: flybirdgroup@163.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-06-10 08:29:36'
+    modifiedAt: '2023-06-10 08:29:41'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-06-10 08:29:36'
+  modifiedAt: '2023-06-10 08:29:36'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
