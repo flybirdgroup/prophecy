@@ -47,8 +47,134 @@
     "topLevelPackage" : "firstpipeline",
     "configurationVersion" : "v1"
   },
-  "connections" : [ ],
-  "processes" : { },
+  "connections" : [ {
+    "id" : "gjqzZTMTwo6tbyWjr0Y-x",
+    "source" : "KTXSZs3S9W_JK7-Cv7teV$$U7pzwS-ALdvLFcaQXTtdP",
+    "sourcePort" : "0x3dI-GSwEM2E0rqY67fl$$MuspNy1HBYMFE6AeKHILI",
+    "target" : "kS2wr3FUqItKCGLXmmZZV$$Q991Yfvl5OmiwImiirWwq",
+    "targetPort" : "7-aeTAttUSglVlbQLHI4c$$E_t3C7rKX2UeYnmQsILZs"
+  }, {
+    "id" : "hOSXHBCHF_B0mxQx_sc39$$0gDUBavtHzM5pZGD32qor",
+    "source" : "kS2wr3FUqItKCGLXmmZZV$$Q991Yfvl5OmiwImiirWwq",
+    "sourcePort" : "bh8-rWF9eFG4U0K_1WqGw$$IRS28ch2ays_Yi86_8S5g",
+    "target" : "FUj7neaxXMIVzN4TNIVLr$$QqXdBYvotLlbG5tfg2n5h",
+    "targetPort" : "45FG073r1jqejF6eqqDF-$$G5TwqnicpzJyME3_DgvYB"
+  } ],
+  "processes" : {
+    "KTXSZs3S9W_JK7-Cv7teV$$U7pzwS-ALdvLFcaQXTtdP" : {
+      "id" : "KTXSZs3S9W_JK7-Cv7teV$$U7pzwS-ALdvLFcaQXTtdP",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Bigquery",
+        "slug" : "Bigquery",
+        "x" : 140,
+        "y" : 160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0x3dI-GSwEM2E0rqY67fl$$MuspNy1HBYMFE6AeKHILI",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Bigquery"
+      }
+    },
+    "kS2wr3FUqItKCGLXmmZZV$$Q991Yfvl5OmiwImiirWwq" : {
+      "id" : "kS2wr3FUqItKCGLXmmZZV$$Q991Yfvl5OmiwImiirWwq",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : 280,
+        "y" : 160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7-aeTAttUSglVlbQLHI4c$$E_t3C7rKX2UeYnmQsILZs",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "value",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "bh8-rWF9eFG4U0K_1WqGw$$IRS28ch2ays_Yi86_8S5g",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "true"
+        }
+      }
+    },
+    "FUj7neaxXMIVzN4TNIVLr$$QqXdBYvotLlbG5tfg2n5h" : {
+      "id" : "FUj7neaxXMIVzN4TNIVLr$$QqXdBYvotLlbG5tfg2n5h",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "cluster",
+        "slug" : "cluster",
+        "x" : 480,
+        "y" : 140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "45FG073r1jqejF6eqqDF-$$G5TwqnicpzJyME3_DgvYB",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "value",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/cluster"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],

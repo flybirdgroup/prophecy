@@ -9,7 +9,9 @@ from prophecy.transpiler.fixed_file_schema import *
 from firstpipeline.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_Bigquery = Bigquery(spark)
+    df_Filter_1 = Filter_1(spark, df_Bigquery)
+    cluster(spark, df_Filter_1)
 
 def main():
     spark = SparkSession.builder\

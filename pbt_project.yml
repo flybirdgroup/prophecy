@@ -20,13 +20,45 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2023-06-10 08:29:36'
-    modifiedAt: '2023-06-10 08:29:41'
+    modifiedAt: '2023-06-10 11:25:35'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/Bigquery
+      outputs:
+      - datasets/cluster
     subgraphs: []
     dependencies: {}
-datasets: {}
+datasets:
+  datasets/Bigquery:
+    name: Bigquery
+    description: ''
+    author: flybirdgroup@163.com
+    createdAt: '2023-06-10 08:50:57'
+    modifiedAt: '2023-06-10 08:50:57'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 2589
+        datasetType: File
+        description: ''
+        author: flybirdgroup@163.com
+        createdAt: '2023-06-10 08:50:57'
+        modifiedAt: '2023-06-10 08:50:57'
+  datasets/cluster:
+    name: cluster
+    description: ''
+    author: flybirdgroup@163.com
+    createdAt: '2023-06-10 11:18:25'
+    modifiedAt: '2023-06-10 11:25:35'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 2589
+        datasetType: Warehouse
+        description: ''
+        author: flybirdgroup@163.com
+        createdAt: '2023-06-10 11:18:25'
+        modifiedAt: '2023-06-10 11:18:25'
 templates: {}
 jobs: {}
 functions:
